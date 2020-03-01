@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>软件工程第二章</title>
+      <link href="/2020/03/01/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
+      <url>/2020/03/01/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="软件工程-第二章"><a href="#软件工程-第二章" class="headerlink" title="软件工程 第二章"></a>软件工程 第二章</h1><hr><h2 id="2-1-定义软件工程学科"><a href="#2-1-定义软件工程学科" class="headerlink" title="2.1 定义软件工程学科"></a>2.1 定义软件工程学科</h2><p><strong>软件工程</strong>是：（1）将系统化的、规范的、可量化的方法应用于软件的开发、运行和维护，即将工程化方法应用于软件；（2）对（1）中所述方法的研究。</p><p>软件工程是一种层次化的技术，支持软件工程的<strong>根基在于质量关注点</strong>。<br>软件工程的基础是<strong>过程</strong>层。<br>软件工程<strong>方法</strong>为构建软件提供技术上的解决方案，包括沟通、需求分析、设计建模、程序构造、测试和技术支持。<br>软件工程<strong>工具</strong>为过程和方法提供自动化或半自动化的支持。<br><img src="https://i.loli.net/2020/03/01/oWwZxCsXkdQ9GnY.png" alt=""></p><h2 id="2-2-软件过程"><a href="#2-2-软件过程" class="headerlink" title="2.2 软件过程"></a>2.2 软件过程</h2><p><strong>软件过程</strong>是工作产品构建时所执行的一系列活动、动作和任务的集合。</p><h3 id="2-2-1-过程框架"><a href="#2-2-1-过程框架" class="headerlink" title="2.2.1 过程框架"></a>2.2.1 过程框架</h3><p>一个通用的软件工程过程框架通常包含以下五个活动：</p><ul><li><strong>沟通</strong></li><li><strong>策划</strong></li><li><strong>建模</strong></li><li><strong>构建</strong></li><li><strong>部署</strong></li></ul><h3 id="2-2-2-普适性活动"><a href="#2-2-2-普适性活动" class="headerlink" title="2.2.2 普适性活动"></a>2.2.2 普适性活动</h3><ul><li><strong>软件项目跟踪和控制</strong></li><li><strong>风险管理</strong></li><li><strong>软件质量保证</strong></li><li><strong>技术评审</strong></li><li><strong>测量</strong></li><li><strong>软件配置管理</strong></li><li><strong>可复用管理</strong></li><li><strong>工作产品的准备和生产</strong></li></ul><h2 id="2-3-软件工程实践"><a href="#2-3-软件工程实践" class="headerlink" title="2.3 软件工程实践"></a>2.3 软件工程实践</h2><h3 id="2-3-1-实践的精髓"><a href="#2-3-1-实践的精髓" class="headerlink" title="2.3.1 实践的精髓"></a>2.3.1 实践的精髓</h3><p>-<strong>理解问题</strong><br>-<strong>策划解决方案</strong><br>-<strong>实施计划</strong><br>-<strong>检查结果</strong></p><h3 id="2-3-2-通用原则"><a href="#2-3-2-通用原则" class="headerlink" title="2.3.2 通用原则"></a>2.3.2 通用原则</h3><p>第一原则<strong>存在价值</strong>：为用户提供价值而具有存在价值<br>第二原则<strong>保持简洁</strong>：所有设计都应尽可能简洁，但不是过于简化。有助于构建更易于理解和维护的系统。<br>第三原则<strong>保持愿景</strong>：清晰的愿景是软件项目成功的基础。<br>第四原则<strong>关注使用者</strong><br>第五原则<strong>面向未来</strong>：为各种可能的方案做好准备，提高整个系统的可复用性<br>第六原则<strong>提前计划复用</strong>：提前做好服用计划将降低开发费用，并增加可复用构件以及构建化系统的价值<br>第七原则<strong>认真思考</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 软件工程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库7</title>
       <link href="/2020/02/29/%E6%95%B0%E6%8D%AE%E5%BA%937/"/>
       <url>/2020/02/29/%E6%95%B0%E6%8D%AE%E5%BA%937/</url>

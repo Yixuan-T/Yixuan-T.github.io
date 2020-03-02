@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="JAVA_程序设计基础 标识符、关键字、注释、常量变量##标识符标识符：为程序中的各个元素（如变量、类名、对象名）进行命名。 一般地，在Java 中标识符是以字母、下划线（_）、美元符号（$）等开始的一个字符序列，后面可以跟字母、下划线、美元符号、数字等字符。所以，不能以数字开始，但其他位置可以使用  标识符是大小写敏感的，不能和关键字相同  关键字所有的关键字都是小写的。  包相关关键字：pac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java_程序设计基础">
+<meta property="og:url" content="http://yixuanwangtong.tech/2020/03/02/java-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="咸鱼糖攻程日记">
+<meta property="og:description" content="JAVA_程序设计基础 标识符、关键字、注释、常量变量##标识符标识符：为程序中的各个元素（如变量、类名、对象名）进行命名。 一般地，在Java 中标识符是以字母、下划线（_）、美元符号（$）等开始的一个字符序列，后面可以跟字母、下划线、美元符号、数字等字符。所以，不能以数字开始，但其他位置可以使用  标识符是大小写敏感的，不能和关键字相同  关键字所有的关键字都是小写的。  包相关关键字：pac">
+<meta property="og:image" content="https://i.loli.net/2020/03/02/Vd4N8lseWBj21LM.png">
+<meta property="article:published_time" content="2020-03-02T07:48:48.000Z">
+<meta property="article:modified_time" content="2020-03-02T07:49:31.887Z">
+<meta property="article:author" content="奶糖">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/02/Vd4N8lseWBj21LM.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yixuanwangtong.tech/2020/03/02/java-程序设计基础/"/>
+
+
+
+
+
+  <title>java_程序设计基础 | 咸鱼糖攻程日记</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">咸鱼糖攻程日记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">敲代码piapiapia</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yixuanwangtong.tech/2020/03/02/java-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="奶糖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咸鱼糖攻程日记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java_程序设计基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-02T15:48:48+08:00">
+                2020-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JAVA-程序设计基础"><a href="#JAVA-程序设计基础" class="headerlink" title="JAVA_程序设计基础"></a>JAVA_程序设计基础</h1><hr>
+<h2 id="标识符、关键字、注释、常量变量"><a href="#标识符、关键字、注释、常量变量" class="headerlink" title="标识符、关键字、注释、常量变量##"></a>标识符、关键字、注释、常量变量##</h2><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p><strong>标识符</strong>：为程序中的各个元素（如变量、类名、对象名）进行命名。</p>
+<p>一般地，在Java 中标识符是以<strong>字母、下划线（_）、美元符号（$）</strong>等开始的一个字符序列，后面可以跟字母、下划线、美元符号、数字等字符。所以，<strong>不能以数字开始</strong>，但其他位置可以使用 </p>
+<p><em>标识符是大小写敏感的，不能和关键字相同</em> </p>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>所有的关键字都是<strong>小写</strong>的。</p>
+<ul>
+<li>包相关关键字：package   import</li>
+<li>用于数据类型的关键字：byte   short  int   long  float double  char   boolean</li>
+<li>用于流程控制语句的关键字：if  else  switch  case  default  do  while  for  break  continue</li>
+<li>方法、类型、变量的修饰关键字：private   public  protected   final  static   abstract   synchronized   volatile</li>
+<li>异常处理关键字：try  catch  finally  throw  throws</li>
+<li>对象相关关键字：new  extends  implements  class  instanceof  this  super</li>
+<li>字面值常量关键字：false   true    null</li>
+<li>方法相关关键字：return   void</li>
+</ul>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>单行注释：单行注释以“//”开头，至该行结尾<br>多行注释：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*  注释文本</span></span><br><span class="line"><span class="comment">   ……</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>文档注释:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**注释文本</span></span><br><span class="line"><span class="comment">*注释文本</span></span><br><span class="line"><span class="comment">*……</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>该类注释可通过jdk下的javadoc.exe程序提取并自动为代码生成文档，Java API文档也是通过这种方式生成。</p>
+<h3 id="变量和常量"><a href="#变量和常量" class="headerlink" title="变量和常量"></a>变量和常量</h3><p>变量<strong>定义</strong>：[修饰符] &lt;类型名&gt;  &lt;变量名&gt; [=&lt;初值&gt;][,&lt;变量名&gt;[=&lt;初值&gt;]…]； </p>
+<ul>
+<li>例如：int i；int j=5，k=4;</li>
+</ul>
+<p>按作用域可以将变量大致分为： </p>
+<ul>
+<li><strong>局部变量</strong>是在方法内部或代码块中声明的变量，它的作用域为所在的代码块，在程序中，以“{ …… }”为界。 </li>
+<li><strong>类成员变量</strong>，它的作用域是整个类。</li>
+<li><strong>方法参数</strong>的作用域，是所在的方法 </li>
+</ul>
+<p><strong>常量定义</strong>：变量定义前加<strong>final关键字</strong>即可。<br>final int NUMBER=100;<br>final int MAX_LOOP=5;<br>常量命名规范：<strong>常量名全部大写</strong></p>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p><img src="https://i.loli.net/2020/03/02/Vd4N8lseWBj21LM.png" alt=""></p>
+<p>###整数类型 ###</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>所占位数</th>
+<th>数的范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>8</td>
+<td>-2^7 ～(2^7 -1)</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16</td>
+<td>-2^15 ～(2^15 -1)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32</td>
+<td>-2^31 ～(2^31 -1)</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64</td>
+<td>-2^63 ～(2^63-1)</td>
+</tr>
+</tbody></table>
+<p><strong>Java中的整数都用二进制的补码表示</strong>。<br>原码：最高位为符号位，正数时为0，负数时为1。<br>补码: 非负数的补码就是原码；负数的补码是将其对应正数的原码按位取反再加1。</p>
+<p>表示<strong>long</strong>型常量时，需在数字后面<strong>加上后缀L或l</strong>。例如3L表示一个long型的常量，而不是int型。</p>
+<p>Java的基本数据类型都有固定的数据位，不随运行平台的变化而变化。计算时注意可能产生的溢出。</p>
+<p>Java中的整数有三种进制表示：<br>十进制：用0<del>9的数值表示，<strong>首位不能为0</strong>，例如：124，-100；<br>八进制：<strong>以0开头</strong>，后跟多个0</del>7之间的数字，如0134；<br>十六进制：<strong>以0x或者0X开头</strong>，后跟多个0<del>9之间的数字、或A</del>F之间的的大写字、或者a<del>f之间的小写字母。a</del>f或者A-F分别表示10~15，例如，0x10，等于十进制数16。</p>
+<h3 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h3><p>Java中，字符类型char用16位的<strong>Unicode</strong>码表示。<br>同c语言，<strong>字符常量用单引号包围表示</strong>，如 ’a’；<br>Unicode是一个编码方案，表示了0到65535的整数与65536个字符间的匹配关系，比如49为字符’1’ ，65为字符’A’ ， 19968为汉字字符’一’。 ASCII码基于拉丁字母只定义了128个字符。</p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\uxxxx</td>
+<td>1到4位16进制数所表示的字符(xxxx)</td>
+</tr>
+<tr>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>横向跳格</td>
+</tr>
+</tbody></table>
+<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>所占位数</th>
+<th>数的范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float（单精度浮点数）</td>
+<td>32</td>
+<td>3.4e-038 ～3.4e+038</td>
+</tr>
+<tr>
+<td>double（双精度浮点数）</td>
+<td>64</td>
+<td>1.7e-308 ～ 1.7e+308</td>
+</tr>
+</tbody></table>
+<p>用IEEE 754 标准将二进制表示成浮点数<br>比如32位的float分成三个区域：1位的符号位s、8位的指数位e、23位的有效数位f。<br>一个浮点数默认为double型。<strong>在一个浮点数后加字母F或f</strong>，表示float型。</p>
+<ul>
+<li>常数3.45的类型是double；3.45F的类型是float。</li>
+</ul>
+<h3 id="各类型数据间的相互转换"><a href="#各类型数据间的相互转换" class="headerlink" title="各类型数据间的相互转换"></a>各类型数据间的相互转换</h3><ul>
+<li><p><strong>自动类型转换</strong>：从表达范围小的类型向表达范围大的类型发生自动类型转换<br>  范围由小到大：byte，short/char, int, long, float, double<br>  byte, short, char类型进行运算时会自动转换为int类型</p>
+</li>
+<li><p>** 强制类型转换**：由表达范围大的向小的类型转换时，需要强制类型转换；因为此时可能会发生数据截断。</p>
+</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>|运算符|    用法    |含义    |结合性|<br>|——|——|——|——|——|<br>|    +    |op1+op2    |加法    |左|<br>|-|    op1-op2    |减法|    左|<br>|*    |op1*op2    |乘法    |左|<br>|/    |op1/op2    |除法    |左|<br>|%    |op1%op2    |模运算(求余)|    左|<br>|+    |+op1    |正数    |右|<br>|-    |-op1    |负数    |右|<br>|++    |++op1,op1++    |自增|    右，左|<br>|–    |–op1, op1–    |自减|    右，左|</p>
+<ul>
+<li>对于二元运算符，运算结果的数据类型为两个操作数中表达范围较大的类型。例如，<br>一个int和double运算的结果为double。对于一元运算符，运算结果的类型与操作数的类型相同</li>
+</ul>
+<p>自增、自减运算符有前缀和后缀两种形式，</p>
+<ul>
+<li>当是前缀形式（即++、–符号出现在变量的左侧）时，对变量实施的运算是“<strong>先运算后使用</strong>”； </li>
+<li>当是后缀形式时，对变量实施的运算是“<strong>先使用后运算</strong></li>
+</ul>
+<p>再次强调：byte，short，char等类型进行算数运算时，会先自动转换为int类型再运算。</p>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=</td>
+<td>count = 2</td>
+<td>count变量赋值为2</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>count += 2</td>
+<td>count = count + 2</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>count -= 2</td>
+<td>count = count - 2</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>count *= 2</td>
+<td>count = count * 2</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>count /= 2</td>
+<td>count = count / 2</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>count %= 2</td>
+<td>count = count % 2</td>
+</tr>
+</tbody></table>
+<h3 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(boolean_expr) ?  </span><br><span class="line">	true_statement : false_statement；</span><br></pre></td></tr></table></figure>
+
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>Java中，boolean（布尔）类型的数据只有两种取值：true、false</p>
+<p>逻辑运算只能处理布尔类型的数据，所得结果也是布尔值 </p>
+<p>运算优先级：非&gt;与&gt;或 </p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例</th>
+<th>含义</th>
+<th>结合性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&amp;</td>
+<td>Op1 &amp;&amp; Op2</td>
+<td>逻辑与运算：仅当两个运算符的值都为true时结果为true</td>
+<td>左</td>
+</tr>
+<tr>
+<td>&#124; &#124;</td>
+<td>Op1 &#124;&#124; Op2</td>
+<td>逻辑或运算：两个运算符中若有其一值为true则结果为true</td>
+<td>左</td>
+</tr>
+<tr>
+<td>!</td>
+<td>! Op</td>
+<td>逻辑非运算：!true=false, !flase=true</td>
+<td>右</td>
+</tr>
+</tbody></table>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><ul>
+<li>&amp;，示例“Op1  &amp;  Op2”，表示使Op1和Op2按位相与</li>
+<li>|，示例“Op1  |  Op2”，表示使Op1和Op2按位相或</li>
+<li>~ ，示例“~Op1”，表示对Op按位取反</li>
+<li>^，示例“Op1 ^ Op2”，表示使Op1和Op2按位异或</li>
+<li>‘&lt;&lt;’，示例“Op1 &lt;&lt;  Op2”，使Op1左移Op2位，右补0</li>
+<li>‘&gt;&gt;’，示例“Op1 &gt;&gt;  Op2”，使Op1右移Op2位(带符号，左边补充符号位)</li>
+<li>‘&gt;&gt;&gt;’，示例“Op1 &gt;&gt;&gt;  Op2”,使Op1无符号右移Op2位(左边始终补添0)</li>
+</ul>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><p><strong>表达式</strong>是程序设计语言的基本组成部分，表示一种求值的规则，是由运算符和操作数组成的符号序列。</p>
+<p>在对表达式进行运算时，遵循一定的规则，要按<strong>运算符的优先级</strong>从高到低进行，同级的运算符则按从左到右的方向进行。</p>
+<p>以下符号优先级从高到低排列：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.	. [] () ++ -- ! ~ </span><br><span class="line">2.	new (type) </span><br><span class="line">3.	* &#x2F; %     </span><br><span class="line">4.	+ -   </span><br><span class="line">5.	&gt;&gt;  &gt;&gt;&gt;  &lt;&lt;       </span><br><span class="line">6.	&lt; &gt; &lt;&#x3D; &gt;&#x3D;   </span><br><span class="line">7.	&#x3D;&#x3D; !&#x3D;     </span><br><span class="line">8.	&amp;  </span><br><span class="line">9.	^ </span><br><span class="line">10.	|    </span><br><span class="line">11.	&amp;&amp; </span><br><span class="line">12.	|| </span><br><span class="line">13.	? :</span><br><span class="line">14.	&#x3D; +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D; %&#x3D; ^&#x3D;</span><br><span class="line">15.	&amp;&#x3D;  &lt;&lt;&#x3D; &gt;&gt;&#x3D; &gt;&gt;&gt;&#x3D;</span><br></pre></td></tr></table></figure>
+
+<h2 id="程序控制语句"><a href="#程序控制语句" class="headerlink" title="程序控制语句"></a>程序控制语句</h2><h3 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h3><p>Java中的选择语句包括：if语句和switch语句。</p>
+<p><strong>if语句</strong>:</p>
+<p>条件condition可以是任何返回布尔值的表达式。条件为真时执行语句statement1，假时执行statement2。else子句是可选的。</p>
+<p>statement1和2可以是单个语句，也可以是程序块。后者必须加大括号。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition) </span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">if</span>(condition)        </span><br><span class="line">		statement;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">      	statement; </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">      statement</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>switch语句</strong>:</p>
+<p>表达式expression返回的类型必须为<strong>byte，short，int，char</strong>，或者<strong>字符串</strong>。</p>
+<p>每个case语句后的值必须是与表达式类型兼容的特定的一个常量</p>
+<p>一旦case匹配，就会顺序执行后面的程序代码，直到遇见break。<br>如果没有一个case常量与表达式的值匹配，则执行default语句(可选)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (expression) &#123;</span><br><span class="line"><span class="keyword">case</span> value1:</span><br><span class="line">      ... <span class="comment">// 语句序列</span></span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> value2:</span><br><span class="line">      ... <span class="comment">//语句序列</span></span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> valueN:</span><br><span class="line">      ... <span class="comment">//语句序列</span></span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">      ... <span class="comment">//语句序列</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p><strong>while语句</strong><br>循环语句，当它的条件表达式是true时，while语句重复执行循环体。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(condition) </span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// 循环体</span></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>do-while语句</strong><br>do-while循环总是先执行循环体，然后再计算条件表达式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">do &#123;</span><br><span class="line">  &#x2F;&#x2F; 循环体</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line">while(condition);</span><br></pre></td></tr></table></figure>
+
+<p><strong>for语句</strong></p>
+<ol>
+<li>执行初始化部分；</li>
+<li>计算条件condition的值；</li>
+<li>若为true，则执行循环体，之后执行迭代iteration部分，然后跳转到第二步；</li>
+<li>若为false，则循环终止</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(initialization; condition; iteration) &#123;</span><br><span class="line">      ... &#x2F;&#x2F; 循环体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="跳转语句"><a href="#跳转语句" class="headerlink" title="跳转语句"></a>跳转语句</h3><p>跳转语句包括：</p>
+<ul>
+<li>return语句</li>
+<li>break语句</li>
+<li>continue语句</li>
+</ul>
+<p><strong>return语句</strong>用来明确地从一个方法返回：<br>若返回一个值，其格式如下： return 返回值;<br>若无返回值，则直接： return ; </p>
+<p><strong>使用break</strong> 退出循环语句或switch语句</p>
+<p><strong>使用continue</strong>终止循环的本次迭代继续进入下一次迭代</p>
+<p><strong>带标记的break &amp; continue</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">outer: <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">           <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">               <span class="keyword">if</span> (j &gt; i) &#123;</span><br><span class="line">                   System.out.println();</span><br><span class="line">                   <span class="keyword">continue</span> outer;</span><br><span class="line">               &#125;</span><br><span class="line">               System.out.print(<span class="string">" "</span> + (i * j));</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>针对标记处的程序行break或continue，该语法类似goto 的功能</li>
+<li>仅建议在继续或退出双重以上循环时使用</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+	<div>
+ 	 	
+  	  		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+ 	 	
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/01/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%AC%E5%9B%9B%E7%AB%A0/" rel="next" title="软件工程第四章">
+                <i class="fa fa-chevron-left"></i> 软件工程第四章
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="奶糖" />
+            
+              <p class="site-author-name" itemprop="name">奶糖</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Yixuan-T" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA-程序设计基础"><span class="nav-number">1.</span> <span class="nav-text">JAVA_程序设计基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标识符、关键字、注释、常量变量"><span class="nav-number">1.1.</span> <span class="nav-text">标识符、关键字、注释、常量变量##</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符"><span class="nav-number">1.1.1.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字"><span class="nav-number">1.1.2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">1.1.3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量和常量"><span class="nav-number">1.1.4.</span> <span class="nav-text">变量和常量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型"><span class="nav-number">1.2.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符类型"><span class="nav-number">1.2.1.</span> <span class="nav-text">字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点类型"><span class="nav-number">1.2.2.</span> <span class="nav-text">浮点类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各类型数据间的相互转换"><span class="nav-number">1.2.3.</span> <span class="nav-text">各类型数据间的相互转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.3.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算术运算符"><span class="nav-number">1.3.1.</span> <span class="nav-text">算术运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值运算符"><span class="nav-number">1.3.2.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件运算符"><span class="nav-number">1.3.3.</span> <span class="nav-text">条件运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.3.4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算符"><span class="nav-number">1.3.5.</span> <span class="nav-text">位运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式"><span class="nav-number">1.4.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序控制语句"><span class="nav-number">1.5.</span> <span class="nav-text">程序控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择语句"><span class="nav-number">1.5.1.</span> <span class="nav-text">选择语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环语句"><span class="nav-number">1.5.2.</span> <span class="nav-text">循环语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跳转语句"><span class="nav-number">1.5.3.</span> <span class="nav-text">跳转语句</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">艺璇</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>

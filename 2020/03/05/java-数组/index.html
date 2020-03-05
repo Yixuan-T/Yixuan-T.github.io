@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -79,12 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="咸鱼糖攻程日记">
-<meta property="og:url" content="http://yixuanwangtong.tech/archives/2020/02/index.html">
+<meta name="description" content="数组 java内存空间分配 共享区域：所有线程共享  堆：存放对象实例和数组， JVM 所管理的内存中最大的一块 方法区：存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。  私有区域：每个线程私有  栈：线程私有，生命周期和线程一致。描述的是 Java 方法执行的内存模型。由栈帧组成，栈帧包含一Java方法调用的状态。 程序计数器：选取下一条需要执行字节码指令。 本地方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java_数组">
+<meta property="og:url" content="http://yixuanwangtong.tech/2020/03/05/java-%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="咸鱼糖攻程日记">
+<meta property="og:description" content="数组 java内存空间分配 共享区域：所有线程共享  堆：存放对象实例和数组， JVM 所管理的内存中最大的一块 方法区：存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。  私有区域：每个线程私有  栈：线程私有，生命周期和线程一致。描述的是 Java 方法执行的内存模型。由栈帧组成，栈帧包含一Java方法调用的状态。 程序计数器：选取下一条需要执行字节码指令。 本地方法">
+<meta property="og:image" content="https://i.loli.net/2020/03/05/xu8I9JXZM3ygiwC.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/05/uCfimq3F7PWOhsa.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/05/938zWI5wgDU2ihR.png">
+<meta property="article:published_time" content="2020-03-05T07:12:47.000Z">
+<meta property="article:modified_time" content="2020-03-05T07:13:39.391Z">
 <meta property="article:author" content="奶糖">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/05/xu8I9JXZM3ygiwC.png">
 
 
 
@@ -114,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yixuanwangtong.tech/archives/2020/02/"/>
+  <link rel="canonical" href="http://yixuanwangtong.tech/2020/03/05/java-数组/"/>
 
 
 
 
 
-  <title>归档 | 咸鱼糖攻程日记</title>
+  <title>java_数组 | 咸鱼糖攻程日记</title>
   
 
 
@@ -139,7 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -267,111 +276,237 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yixuanwangtong.tech/2020/03/05/java-%E6%95%B0%E7%BB%84/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="奶糖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咸鱼糖攻程日记">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/02/29/%E6%95%B0%E6%8D%AE%E5%BA%937/" itemprop="url">
-              
-                <span itemprop="name">数据库7</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">java_数组</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-02-29T16:32:17+08:00"
-              content="2020-02-29" >
-          02-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-05T15:12:47+08:00">
+                2020-03-05
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/02/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%AC%E4%B8%80%E7%AB%A0/" itemprop="url">
-              
-                <span itemprop="name">数据库系统概念第一章</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-02-27T16:17:12+08:00"
-              content="2020-02-27" >
-          02-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><hr>
+<h2 id="java内存空间分配"><a href="#java内存空间分配" class="headerlink" title="java内存空间分配"></a>java内存空间分配</h2><p><img src="https://i.loli.net/2020/03/05/xu8I9JXZM3ygiwC.png" alt=""></p>
+<p><strong>共享区域：所有线程共享</strong></p>
+<ul>
+<li>堆：存放对象实例和数组， JVM 所管理的内存中最大的一块</li>
+<li>方法区：存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。</li>
+</ul>
+<p><strong>私有区域：每个线程私有</strong></p>
+<ul>
+<li>栈：线程私有，生命周期和线程一致。描述的是 Java 方法执行的内存模型。由栈帧组成，栈帧包含一Java方法调用的状态。</li>
+<li>程序计数器：选取下一条需要执行字节码指令。</li>
+<li>本地方法栈：Java 虚拟机栈为虚拟机执行 Java 方法(也就是字节码)服务，而本地方法栈则为虚拟机使用到的 Native 方法服务。</li>
+</ul>
+<h2 id="栈内存和堆内存"><a href="#栈内存和堆内存" class="headerlink" title="栈内存和堆内存"></a>栈内存和堆内存</h2><p><strong>基本数据类型和引用的变量存放于栈内存。</strong></p>
+<ul>
+<li><p>声明时即会分配存储空间，有默认值： int i;</p>
+</li>
+<li><p>当超过变量的作用域后，存储空间会自动释放</p>
+<p><strong>数组和对象存放于堆内存。</strong></p>
+</li>
+<li><p>由new命令创建</p>
+</li>
+<li><p>堆内存中的对象和数组只能由栈内存中的引用(reference)变量来访问，引用相当于是指针</p>
+</li>
+<li><p>数组和对象在没有引用变量指向它的时候，变成垃圾；由java虚拟机垃圾回收器来自动回收</p>
+</li>
+</ul>
+<h2 id="基本数据类型的默认初始值"><a href="#基本数据类型的默认初始值" class="headerlink" title="基本数据类型的默认初始值"></a>基本数据类型的默认初始值</h2><p><img src="https://i.loli.net/2020/03/05/uCfimq3F7PWOhsa.png" alt=""></p>
+<h2 id="一维数组定义"><a href="#一维数组定义" class="headerlink" title="一维数组定义"></a>一维数组定义</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">声明：int  a[ ]；   或者   int[ ]  a；</span><br></pre></td></tr></table></figure>
+<p>这里<strong>只有数组的引用的定义</strong>，没有为数组元素分配空间，只为数组的引用分配了空间，a的值为null。</p>
+<p>分配内存： &lt;数组名&gt;= new  &lt;类型&gt;[ &lt;长度&gt; ]；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例子：a=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];     </span><br><span class="line"><span class="comment">//创建了一个包含５个元素的数组ａ，每个元素被自动初始化为０</span></span><br></pre></td></tr></table></figure>
+<p>访问数组中的元素：a[0], a[1], ….</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">声明并分配空间：int a[ ] &#x3D;new int[5];</span><br></pre></td></tr></table></figure>
+<p>在声明数组时，可以为数组分配内存并赋初值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[ ]&#x3D;&#123;0，1，2，3，4&#125;；</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2020/03/05/938zWI5wgDU2ihR.png" alt=""></p>
+<p>Java中使用数组引用.length表示数组的长度</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println( a.length );</span><br></pre></td></tr></table></figure>
+<p><strong>越界保护</strong>：若访问数组时下标越界，则扔出异常</p>
+<h2 id="for-each-语句"><a href="#for-each-语句" class="headerlink" title="for-each 语句"></a>for-each 语句</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;a.length; i++)&#123;	</span><br><span class="line">	<span class="keyword">int</span> e = a[i];           sum = sum + e;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(sum);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> e : a)	</span><br><span class="line">	sum = sum + e;</span><br><span class="line">System.out.println(sum);</span><br></pre></td></tr></table></figure>
+<p>用for-each语句遍历一个数组或集合中的所有元素，代码更简洁。语法：for ( type e : a ){…} </p>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>二维数组是一个特殊的一维数组，它的每个元素都是一个一维数组（多维数组也是同理）：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>  two[][]  ； <span class="comment">//声明,或者int[][]two</span></span><br><span class="line">two=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][<span class="number">3</span>];  <span class="comment">//分配内存</span></span><br></pre></td></tr></table></figure>
+<p>在定义二维数组时也可以赋初值，将数组元素的值用多层括号括起来，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> two[][]=&#123;&#123;<span class="number">0</span>，<span class="number">1</span>，<span class="number">2</span>&#125;，&#123;<span class="number">3</span>，<span class="number">4</span>，<span class="number">5</span>&#125;&#125;；</span><br></pre></td></tr></table></figure>
+<p>二维数组还有另外一种初始化方式，就是从最高维开始，分别为每一维分配空间。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] two =<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][ ];</span><br><span class="line">two[<span class="number">0</span>]=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">two[<span class="number">1</span>]=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">20</span>];<span class="comment">//two[0]、two[1]两数组长度不一样</span></span><br></pre></td></tr></table></figure>
+<h2 id="Arrays-类"><a href="#Arrays-类" class="headerlink" title="Arrays 类"></a>Arrays 类</h2><p>为方便数组的使用，Java在包java.util定义了一个叫Arrays的类。Arrays类提供了多个操作数组的静态方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> type[] copyOf (type[] original,<span class="keyword">int</span> length)</span><br><span class="line"><span class="comment">//将original数组复制为一个新数组，其中length为新数组的长度。</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> binarySearch（type[] a,type key）</span><br><span class="line"><span class="comment">//使用二分搜索法在数组a中搜索指定值key；</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">boolean</span> equals（type[] a,type[] b）</span><br><span class="line"><span class="comment">//比较两个数组是否相等；</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fill</span> <span class="params">(type[] a, type val)</span></span></span><br><span class="line"><span class="function"><span class="comment">//用一个指定的值val填充数组a；</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fill</span> <span class="params">(type[] a, <span class="keyword">int</span> fromIndex, <span class="keyword">int</span> toIndex, type val)</span></span></span><br><span class="line"><span class="function"><span class="comment">//与前一个方法类似，但填充时仅仅针对下标为fromIndex到toIndex-1的数组元素赋值为val；</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> sort（type[] a）</span></span><br><span class="line"><span class="function"><span class="comment">//对数组a排序；</span></span></span><br></pre></td></tr></table></figure>
+      
     </div>
+    
+    
+    
+	<div>
+ 	 	
+  	  		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+ 	 	
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/02/java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/" rel="next" title="java程序设计基础">
+                <i class="fa fa-chevron-left"></i> java程序设计基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/05/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%AC%E4%BA%94%E7%AB%A0/" rel="prev" title="软件工程第五章">
+                软件工程第五章 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -379,6 +514,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -399,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -474,6 +622,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#java内存空间分配"><span class="nav-number">1.1.</span> <span class="nav-text">java内存空间分配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈内存和堆内存"><span class="nav-number">1.2.</span> <span class="nav-text">栈内存和堆内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型的默认初始值"><span class="nav-number">1.3.</span> <span class="nav-text">基本数据类型的默认初始值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一维数组定义"><span class="nav-number">1.4.</span> <span class="nav-text">一维数组定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-each-语句"><span class="nav-number">1.5.</span> <span class="nav-text">for-each 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组"><span class="nav-number">1.6.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Arrays-类"><span class="nav-number">1.7.</span> <span class="nav-text">Arrays 类</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -641,6 +805,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
